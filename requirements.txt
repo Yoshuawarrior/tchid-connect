@@ -22,3 +22,6 @@ Flask-CORS==4.0.1
 
 # Gestion des sessions sécurisées
 Flask-Session==0.8.0
+
+# Serveur WSGI
+gunicorn==20.1.0

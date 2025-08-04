@@ -1,0 +1,378 @@
+{% extends "base.html" %}
+
+{% block title %}Communauté - TCHID Connect IT Consulting{% endblock %}
+
+{% block extra_css %}
+<style>
+    .community-hero {
+        background: linear-gradient(135deg, var(--darker-color) 0%, var(--primary-color) 100%);
+        padding: 4rem 0;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .community-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23ffffff" opacity="0.1"/></svg>');
+        opacity: 0.3;
+    }
+    
+    .community-stats {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .stat-item {
+        text-align: center;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        display: block;
+    }
+    
+    .platform-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        color: white;
+        border: none;
+        font-size: 1rem;
+    }
+    
+    .platform-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-lg);
+        color: white;
+    }
+    
+    .telegram-btn {
+        background: linear-gradient(135deg, #0088cc, #229ED9);
+    }
+    
+    .facebook-btn {
+        background: linear-gradient(135deg, #1877f2, #42a5f5);
+    }
+    
+    .linkedin-btn {
+        background: linear-gradient(135deg, #0077b5, #0e76a8);
+    }
+    
+    .whatsapp-btn {
+        background: linear-gradient(135deg, #25d366, #128c7e);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="community-hero">
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-4">Rejoignez Notre Communauté</h1>
+                <p class="lead mb-4">
+                    Connectez-vous avec des professionnels de l'IT, partagez vos expériences et restez informé des dernières innovations technologiques avec TCHID Connect.
+                </p>
+                <div class="community-stats">
+                    <div class="row">
+                        <div class="col-md-3 col-6 stat-item mb-3">
+                            <span class="stat-number">500+</span>
+                            <small>Membres Actifs</small>
+                        </div>
+                        <div class="col-md-3 col-6 stat-item mb-3">
+                            <span class="stat-number">50+</span>
+                            <small>Projets Partagés</small>
+                        </div>
+                        <div class="col-md-3 col-6 stat-item mb-3">
+                            <span class="stat-number">24/7</span>
+                            <small>Support Communautaire</small>
+                        </div>
+                        <div class="col-md-3 col-6 stat-item mb-3">
+                            <span class="stat-number">4</span>
+                            <small>Plateformes</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-users" style="font-size: 8rem; opacity: 0.3;"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Plateformes Sociales -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Plateformes Communautaires</h2>
+            <p class="section-subtitle">Choisissez votre plateforme préférée pour nous rejoindre</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Telegram -->
+            <div class="col-lg-6 col-md-6">
+                <div class="community-card h-100">
+                    <div class="community-icon telegram-bg">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h4 class="mb-3">TCHID Academy</h4>
+                    <p class="text-muted mb-4">
+                        Rejoignez notre canal Telegram pour recevoir des tutoriels exclusifs, des conseils techniques et des annonces de formations en temps réel.
+                    </p>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between small text-muted">
+                            <span><i class="fas fa-users me-1"></i> 200+ membres</span>
+                            <span><i class="fas fa-clock me-1"></i> Actif 24/7</span>
+                        </div>
+                    </div>
+                    <a href="https://t.me/tchidacademy/" target="_blank" class="platform-btn telegram-btn w-100 justify-content-center">
+                        <i class="fab fa-telegram"></i>
+                        Rejoindre le Canal
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Facebook -->
+            <div class="col-lg-6 col-md-6">
+                <div class="community-card h-100">
+                    <div class="community-icon facebook-bg">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <h4 class="mb-3">Page Facebook</h4>
+                    <p class="text-muted mb-4">
+                        Suivez notre page Facebook pour les actualités de l'entreprise, les projets réalisés et les témoignages clients.
+                    </p>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between small text-muted">
+                            <span><i class="fas fa-thumbs-up me-1"></i> 150+ likes</span>
+                            <span><i class="fas fa-share me-1"></i> Contenu quotidien</span>
+                        </div>
+                    </div>
+                    <a href="https://www.facebook.com/share/16mAivT9tq/" target="_blank" class="platform-btn facebook-btn w-100 justify-content-center">
+                        <i class="fab fa-facebook-f"></i>
+                        Suivre la Page
+                    </a>
+                </div>
+            </div>
+            
+            <!-- LinkedIn -->
+            <div class="col-lg-6 col-md-6">
+                <div class="community-card h-100">
+                    <div class="community-icon linkedin-bg">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <h4 class="mb-3">LinkedIn Professionnel</h4>
+                    <p class="text-muted mb-4">
+                        Connectez-vous avec nous sur LinkedIn pour le networking professionnel, les opportunités d'emploi et les insights industrie.
+                    </p>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between small text-muted">
+                            <span><i class="fas fa-briefcase me-1"></i> Réseau pro</span>
+                            <span><i class="fas fa-chart-line me-1"></i> Insights métier</span>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/tchid-connect-it-consulting-594a572aa" target="_blank" class="platform-btn linkedin-btn w-100 justify-content-center">
+                        <i class="fab fa-linkedin-in"></i>
+                        Se Connecter
+                    </a>
+                </div>
+            </div>
+            
+            <!-- WhatsApp -->
+            <div class="col-lg-6 col-md-6">
+                <div class="community-card h-100">
+                    <div class="community-icon whatsapp-bg">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4 class="mb-3">Groupe WhatsApp</h4>
+                    <p class="text-muted mb-4">
+                        Rejoignez notre groupe WhatsApp pour des discussions en temps réel, du support technique rapide et des échanges entre professionnels.
+                    </p>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between small text-muted">
+                            <span><i class="fas fa-comments me-1"></i> Chat en direct</span>
+                            <span><i class="fas fa-headset me-1"></i> Support rapide</span>
+                        </div>
+                    </div>
+                    <a href="https://chat.whatsapp.com/DTXbNaUvOu85z7MeH7cnuF?mode=ac_t" target="_blank" class="platform-btn whatsapp-btn w-100 justify-content-center">
+                        <i class="fab fa-whatsapp"></i>
+                        Rejoindre le Groupe
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Avantages de la Communauté -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Pourquoi Rejoindre Notre Communauté ?</h2>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="modern-card p-4 text-center h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-graduation-cap text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Formation Continue</h5>
+                    <p class="text-muted">Accédez à des formations exclusives, webinaires et ressources pédagogiques pour développer vos compétences.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="modern-card p-4 text-center h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-network-wired text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Networking</h5>
+                    <p class="text-muted">Connectez-vous avec des professionnels de l'IT, partagez vos expériences et développez votre réseau.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="modern-card p-4 text-center h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-headset text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Support Technique</h5>
+                    <p class="text-muted">Bénéficiez d'un support technique rapide et de conseils d'experts pour résoudre vos défis IT.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="modern-card p-4 text-center h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-lightbulb text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Innovation</h5>
+                    <p class="text-muted">Découvrez les dernières tendances technologiques et innovations dans le domaine de l'IT.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="modern-card p-4 text-center h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-briefcase text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Opportunités</h5>
+                    <p class="text-muted">Accédez à des opportunités d'emploi, de collaboration et de projets dans le secteur IT.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="modern-card p-4 text-center h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-certificate text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Certifications</h5>
+                    <p class="text-muted">Obtenez des certifications reconnues et validez vos compétences auprès d'employeurs potentiels.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5" style="background: var(--gradient-primary);">
+    <div class="container">
+        <div class="row justify-content-center text-center text-white">
+            <div class="col-lg-8">
+                <h2 class="mb-4">Prêt à Rejoindre Notre Communauté ?</h2>
+                <p class="lead mb-4">
+                    Ne manquez pas l'opportunité de faire partie d'une communauté dynamique de professionnels IT au Congo et en Afrique.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="https://t.me/tchidacademy/" target="_blank" class="btn btn-light btn-lg">
+                        <i class="fab fa-telegram me-2"></i>
+                        Telegram
+                    </a>
+                    <a href="https://www.facebook.com/share/16mAivT9tq/" target="_blank" class="btn btn-light btn-lg">
+                        <i class="fab fa-facebook-f me-2"></i>
+                        Facebook
+                    </a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-envelope me-2"></i>
+                        Nous Contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Animation au scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-on-scroll', 'animated');
+            }
+        });
+    }, observerOptions);
+
+    // Observer tous les éléments avec la classe animate-on-scroll
+    document.querySelectorAll('.community-card, .modern-card').forEach(el => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
+    });
+
+    // Effet de compteur pour les statistiques
+    function animateCounter(element, target) {
+        let current = 0;
+        const increment = target / 100;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target + (element.textContent.includes('+') ? '+' : '');
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current) + (element.textContent.includes('+') ? '+' : '');
+            }
+        }, 20);
+    }
+
+    // Animer les compteurs quand ils deviennent visibles
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumber = entry.target.querySelector('.stat-number');
+                const targetValue = parseInt(statNumber.textContent);
+                animateCounter(statNumber, targetValue);
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    });
+
+    document.querySelectorAll('.stat-item').forEach(el => {
+        statsObserver.observe(el);
+    });
+</script>
+{% endblock %}

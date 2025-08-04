@@ -1,0 +1,327 @@
+{% extends 'base.html' %}
+
+{% block title %}Installation et Maintenance Réseaux - TCHID Connect IT Consulting{% endblock %}
+
+{% block content %}
+<!-- Service Hero Section -->
+<section class="service-hero-section py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4">Installation et Maintenance des Réseaux</h1>
+                <p class="lead">Solutions complètes pour vos infrastructures réseau</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Overview -->
+<section class="service-overview py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="{{ url_for('static', filename='img/Visuel Salle serveur.png') }}" alt="Salle Serveur" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title">Infrastructure Réseau Robuste</h2>
+                <p class="mb-4">TCHID Connect IT Consulting offre des services complets d'installation, de configuration et de maintenance de réseaux informatiques pour les entreprises de toutes tailles. Notre expertise couvre les réseaux locaux (LAN) et étendus (WAN), assurant une connectivité fiable et performante.</p>
+                <p>Nos ingénieurs certifiés conçoivent et implémentent des solutions réseau adaptées à vos besoins spécifiques, en utilisant les technologies les plus récentes et les meilleures pratiques de l'industrie.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Features -->
+<section class="service-features py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Services Réseau</h2>
+            <p class="section-subtitle">Des solutions complètes pour votre infrastructure</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Feature 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-network-wired fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Câblage Réseau</h3>
+                        <p class="card-text">Installation professionnelle de câblage structuré pour les réseaux d'entreprise, avec certification et documentation complète.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Câblage cuivre et fibre optique</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Certification des liaisons</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Documentation technique</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-server fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Intégration et Déploiement</h3>
+                        <p class="card-text">Conception, implémentation et déploiement de solutions réseau complètes, adaptées aux besoins spécifiques de votre entreprise.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Conception d'architecture réseau</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Installation et configuration</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Migration et mise à niveau</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-cogs fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Administration Réseau</h3>
+                        <p class="card-text">Gestion proactive de votre infrastructure réseau pour assurer des performances optimales et une disponibilité maximale.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Surveillance et maintenance</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Gestion des performances</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Résolution proactive des problèmes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-headset fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Support Technique</h3>
+                        <p class="card-text">Assistance technique réactive et efficace pour résoudre rapidement les problèmes réseau et minimiser les temps d'arrêt.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Support 24/7</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Intervention sur site</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Assistance à distance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Formation du Personnel</h3>
+                        <p class="card-text">Formation personnalisée pour votre équipe IT sur les technologies réseau et les meilleures pratiques de gestion.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Formation sur mesure</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Documentation technique</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Transfert de compétences</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-chart-line fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Audit et Optimisation</h3>
+                        <p class="card-text">Évaluation complète de votre infrastructure réseau pour identifier les problèmes potentiels et optimiser les performances.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Analyse de l'infrastructure</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Recommandations d'amélioration</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Plan d'optimisation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technologies -->
+<section class="technologies-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Technologies et Partenaires</h2>
+            <p class="section-subtitle">Nous travaillons avec les meilleures marques de l'industrie</p>
+        </div>
+
+        <div class="row align-items-center justify-content-center g-4">
+            <div class="col-6 col-md-3 col-lg-2 text-center">
+                <div class="tech-logo">
+                    <img src="{{ url_for('static', filename='img/partner-cisco.png') }}" alt="Cisco" class="img-fluid" onerror="this.src='https://via.placeholder.com/150x75?text=Cisco'">
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 text-center">
+                <div class="tech-logo">
+                    <img src="{{ url_for('static', filename='img/partner-mikrotik.png') }}" alt="MikroTik" class="img-fluid" onerror="this.src='https://via.placeholder.com/150x75?text=MikroTik'">
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 text-center">
+                <div class="tech-logo">
+                    <img src="{{ url_for('static', filename='img/partner-ubiquiti.png') }}" alt="Ubiquiti" class="img-fluid" onerror="this.src='https://via.placeholder.com/150x75?text=Ubiquiti'">
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 text-center">
+                <div class="tech-logo">
+                    <img src="{{ url_for('static', filename='img/partner-hp.png') }}" alt="HP" class="img-fluid" onerror="this.src='https://via.placeholder.com/150x75?text=HP'">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Case Studies -->
+<section class="case-studies-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Réalisations</h2>
+            <p class="section-subtitle">Découvrez comment nous avons aidé nos clients</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Case Study 1 -->
+            <div class="col-md-6">
+                <div class="card case-study-card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h3 class="card-title h5 mb-3">Modernisation du réseau d'une entreprise de logistique</h3>
+                        <p class="card-text mb-3">Nous avons conçu et déployé une infrastructure réseau complète pour une entreprise de logistique en pleine croissance, améliorant la fiabilité et les performances tout en réduisant les coûts opérationnels.</p>
+                        <div class="case-study-results mt-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Augmentation de 99,9% de la disponibilité du réseau</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Réduction de 40% des temps de latence</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Économie de 25% sur les coûts de maintenance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="col-md-6">
+                <div class="card case-study-card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h3 class="card-title h5 mb-3">Déploiement d'un réseau multi-sites pour une chaîne de magasins</h3>
+                        <p class="card-text mb-3">Nous avons conçu et implémenté une solution réseau unifiée pour une chaîne de magasins avec 15 sites, permettant une gestion centralisée et une communication sécurisée entre tous les emplacements.</p>
+                        <div class="case-study-results mt-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Connectivité sécurisée entre 15 sites</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Gestion centralisée de l'infrastructure</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Réduction de 30% des incidents réseau</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            <p class="section-subtitle">Réponses à vos questions sur nos services réseau</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="networkFaq">
+                    <!-- Question 1 -->
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                Quels types de réseaux pouvez-vous installer et maintenir?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#networkFaq">
+                            <div class="accordion-body">
+                                Nous installons et maintenons tous types de réseaux, y compris les réseaux locaux (LAN), les réseaux étendus (WAN), les réseaux sans fil (WLAN), les réseaux privés virtuels (VPN) et les réseaux définis par logiciel (SDN). Notre équipe est certifiée sur les principales technologies réseau du marché, notamment Cisco, MikroTik, Ubiquiti et HP.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                Comment assurez-vous la sécurité de notre réseau?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#networkFaq">
+                            <div class="accordion-body">
+                                La sécurité est une priorité dans toutes nos installations réseau. Nous mettons en œuvre plusieurs couches de protection, notamment des pare-feu de nouvelle génération, des systèmes de détection et de prévention d'intrusion, des VPN sécurisés, et des politiques de segmentation réseau. Nous effectuons également des audits de sécurité réguliers et des tests de pénétration pour identifier et corriger les vulnérabilités potentielles.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Proposez-vous des contrats de maintenance pour les réseaux existants?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#networkFaq">
+                            <div class="accordion-body">
+                                Oui, nous proposons des contrats de maintenance flexibles adaptés à vos besoins spécifiques. Nos services de maintenance incluent la surveillance proactive, les mises à jour régulières, la résolution rapide des problèmes, et l'assistance technique. Nous offrons différents niveaux de service, du support pendant les heures de bureau au support 24/7, pour répondre aux exigences de disponibilité de votre entreprise.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="accordion-item border-0 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                Combien de temps prend l'installation d'un nouveau réseau d'entreprise?
+                            </button>
+                        </h3>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#networkFaq">
+                            <div class="accordion-body">
+                                La durée d'installation dépend de plusieurs facteurs, notamment la taille de votre entreprise, la complexité du réseau, et les exigences spécifiques. Un petit réseau peut être installé en quelques jours, tandis qu'un réseau d'entreprise complexe peut prendre plusieurs semaines. Nous travaillons avec vous pour établir un calendrier réaliste qui minimise les perturbations de vos activités, avec la possibilité de réaliser les travaux en dehors des heures de bureau si nécessaire.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section py-5 bg-primary text-white text-center">
+    <div class="container">
+        <h2 class="mb-4">Prêt à optimiser votre infrastructure réseau?</h2>
+        <p class="lead mb-4">Contactez-nous dès aujourd'hui pour discuter de vos besoins et obtenir un devis personnalisé.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Contactez-nous</a>
+    </div>
+</section>
+{% endblock %}

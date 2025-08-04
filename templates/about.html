@@ -1,0 +1,330 @@
+{% extends 'base.html' %}
+
+{% block title %}À Propos - TCHID Connect IT Consulting{% endblock %}
+
+{% block content %}
+<!-- About Hero Section -->
+<section class="about-hero-section py-5" style="background: linear-gradient(135deg, #2c3e50 0%, #3498db 50%, #1a252f 100%); color: white;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4">À Propos de Nos Services</h1>
+                <p class="lead">TCHID Connect IT Consulting est une société spécialisée dans l'administration des systèmes et réseaux, la sécurité électronique, la géolocalisation, l'assistance et l'audit informatique.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Company Overview -->
+<section class="company-overview py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="{{ url_for('static', filename='img/company-overview.png') }}" alt="TCHID Connect Overview" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title">Notre Entreprise</h2>
+                <p class="mb-4">TCHID Connect IT Consulting est une société spécialisée dans l'administration des systèmes et réseaux, la sécurité électronique, la géolocalisation, l'assistance et l'audit informatique.</p>
+                <p class="mb-4">Nous accompagnons les entreprises et les organisations dans l'optimisation de leurs infrastructures IT et la sécurisation de leurs actifs.</p>
+                <p>Avec une équipe d'experts qualifiés et une approche centrée sur le client, nous offrons des solutions personnalisées qui répondent aux besoins spécifiques de chaque entreprise, tout en garantissant un service de qualité à un coût réduit.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="mission-vision py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="h4 mb-0">Notre Mission</h3>
+                        </div>
+                        <p>Notre mission est de fournir des solutions IT innovantes et fiables qui permettent à nos clients d'optimiser leurs opérations, de sécuriser leurs données et d'améliorer leur efficacité opérationnelle.</p>
+                        <p>Nous nous engageons à offrir un service de qualité supérieure, avec une expertise technique de pointe et un support client réactif, le tout à un coût compétitif.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="h4 mb-0">Notre Vision</h3>
+                        </div>
+                        <p>Notre vision est de devenir le leader régional en matière de solutions IT, reconnu pour notre excellence technique, notre innovation et notre engagement envers la satisfaction client.</p>
+                        <p>Nous aspirons à être le partenaire technologique de confiance pour les entreprises de toutes tailles, en les aidant à naviguer dans le paysage numérique en constante évolution et à tirer parti des technologies émergentes pour stimuler leur croissance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Values -->
+<section class="our-values py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Valeurs</h2>
+            <p class="section-subtitle">Les principes qui guident notre travail quotidien</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Value 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card value-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="value-icon mb-3">
+                            <i class="fas fa-medal fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="card-title h5">Excellence</h3>
+                        <p class="card-text">Nous nous efforçons d'atteindre l'excellence dans tous les aspects de notre travail, en fournissant des solutions de haute qualité qui dépassent les attentes de nos clients.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card value-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="value-icon mb-3">
+                            <i class="fas fa-handshake fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="card-title h5">Intégrité</h3>
+                        <p class="card-text">Nous agissons avec honnêteté, transparence et éthique dans toutes nos interactions, en établissant des relations de confiance durables avec nos clients et partenaires.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card value-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="value-icon mb-3">
+                            <i class="fas fa-lightbulb fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="card-title h5">Innovation</h3>
+                        <p class="card-text">Nous embrassons l'innovation et la créativité, en recherchant constamment de nouvelles façons d'améliorer nos services et de résoudre les défis technologiques de nos clients.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card value-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="value-icon mb-3">
+                            <i class="fas fa-users fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="card-title h5">Collaboration</h3>
+                        <p class="card-text">Nous croyons en la puissance de la collaboration, en travaillant en étroite collaboration avec nos clients pour comprendre leurs besoins et développer des solutions personnalisées.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Team -->
+<section class="our-team py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Notre Équipe</h2>
+            <p class="section-subtitle">Des experts passionnés dédiés à votre succès</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Team Member 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card team-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="team-avatar mb-3">
+                            <div class="avatar-placeholder bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 120px; height: 120px;">
+                                <i class="fas fa-user fa-3x"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title h5">Directeur Général</h3>
+                        <p class="text-muted mb-3">Visionnaire et leader</p>
+                        <p class="card-text">Plus de 15 ans d'expérience dans le secteur IT, spécialisé dans la stratégie et le développement commercial.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card team-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="team-avatar mb-3">
+                            <div class="avatar-placeholder bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 120px; height: 120px;">
+                                <i class="fas fa-user fa-3x"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title h5">Responsable Technique</h3>
+                        <p class="text-muted mb-3">Expert en infrastructure</p>
+                        <p class="card-text">Certifié dans les technologies réseau et sécurité, avec une vaste expérience dans la conception et l'implémentation de solutions IT complexes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card team-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="team-avatar mb-3">
+                            <div class="avatar-placeholder bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 120px; height: 120px;">
+                                <i class="fas fa-user fa-3x"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title h5">Ingénieur Sécurité</h3>
+                        <p class="text-muted mb-3">Spécialiste en cybersécurité</p>
+                        <p class="card-text">Expert en systèmes de vidéo-surveillance, contrôle d'accès et protection des données, avec une approche proactive de la sécurité.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card team-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="team-avatar mb-3">
+                            <div class="avatar-placeholder bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 120px; height: 120px;">
+                                <i class="fas fa-user fa-3x"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title h5">Support Client</h3>
+                        <p class="text-muted mb-3">Service client dévoué</p>
+                        <p class="card-text">Dédié à fournir un support réactif et efficace, avec une forte orientation vers la satisfaction client et la résolution de problèmes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Réalisations</h2>
+            <p class="section-subtitle">Découvrez quelques-unes de nos installations sur le terrain</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/Terrain 1.jpg') }}" alt="Installation Terrain 1" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/Terrain 2.jpg') }}" alt="Installation Terrain 2" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/Terrain 3.jpg') }}" alt="Installation Terrain 3" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/Terrain 4.jpg') }}" alt="Installation Terrain 4" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/Terrain 5.jpg') }}" alt="Installation Terrain 5" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/Terrain 6.jpg') }}" alt="Installation Terrain 6" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/Terrain 7.jpg') }}" alt="Installation Terrain 7" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/Terrain 8.jpg') }}" alt="Installation Terrain 8" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/Terrain 9.jpg') }}" alt="Installation Terrain 9" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partners -->
+<section class="partners-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Partenaires Technologiques</h2>
+            <p class="section-subtitle">Nous collaborons avec les meilleurs pour vous offrir des solutions de qualité</p>
+        </div>
+
+        <div class="row align-items-center justify-content-center g-4">
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/partners/CISCO.png') }}" alt="Cisco" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/partners/HIKVISION.png') }}" alt="Hikvision" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/partners/MIKROTIK.png') }}" alt="MikroTik" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/partners/ZKTeco.png') }}" alt="ZKTeco" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/partners/SAP_2011_logo.svg.png') }}" alt="SAP" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/partners/DOLIBAR.png') }}" alt="Dolibarr" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/partners/WI-TEK.png') }}" alt="Wi-Tek" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/partners/OS.png') }}" alt="OS" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section py-5 bg-primary text-white text-center">
+    <div class="container">
+        <h2 class="mb-4">Prêt à collaborer avec nous?</h2>
+        <p class="lead mb-4">Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment nous pouvons vous aider.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Contactez-nous</a>
+    </div>
+</section>
+{% endblock %}

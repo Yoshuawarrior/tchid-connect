@@ -1,0 +1,310 @@
+{% extends 'base.html' %}
+
+{% block title %}Nos Services - TCHID Connect IT Consulting{% endblock %}
+
+{% block content %}
+<!-- Services Hero Section -->
+<section class="services-hero-section py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4">Nos Services</h1>
+                <p class="lead">Des solutions IT complètes pour répondre à tous vos besoins technologiques</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="services-overview py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Solutions Professionnelles</h2>
+            <p class="section-subtitle">Des services de qualité à un coût réduit</p>
+        </div>
+
+        <!-- Installation et Maintenance Réseaux -->
+        <div class="service-item mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="{{ url_for('static', filename='img/service-network.png') }}" alt="Installation et Maintenance Réseaux" class="img-fluid rounded shadow" onerror="this.src='https://via.placeholder.com/600x400?text=Installation+et+Maintenance+Réseaux'">
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-content">
+                        <div class="service-icon mb-3 text-primary">
+                            <i class="fas fa-network-wired fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Installation et Maintenance des Réseaux LAN/WAN</h3>
+                        <p class="mb-4">Nous offrons des services complets d'installation, de configuration et de maintenance de réseaux informatiques pour les entreprises de toutes tailles. Notre expertise couvre les réseaux locaux (LAN) et étendus (WAN), assurant une connectivité fiable et performante.</p>
+                        <div class="service-features mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Câblage réseau professionnel</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Intégration et déploiement de solutions réseau</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Administration réseau</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Support technique</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Formation du personnel</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Audit et optimisation des services</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Assistance et conseil</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Gestion du parc informatique</span>
+                            </div>
+                        </div>
+                        <a href="{{ url_for('infrastructure_services') }}" class="btn btn-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vidéo-surveillance -->
+        <div class="service-item mb-5">
+            <div class="row align-items-center flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="{{ url_for('static', filename='img/service-surveillance.png') }}" alt="Vidéo-surveillance" class="img-fluid rounded shadow" onerror="this.src='https://via.placeholder.com/600x400?text=Vidéo-surveillance'">
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-content">
+                        <div class="service-icon mb-3 text-primary">
+                            <i class="fas fa-video fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Vidéo-surveillance</h3>
+                        <p class="mb-4">Protégez vos locaux et vos actifs avec nos solutions de vidéo-surveillance avancées. Nous concevons, installons et maintenons des systèmes de sécurité sur mesure qui répondent à vos besoins spécifiques en matière de sécurité.</p>
+                        <div class="service-features mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Systèmes anti-intrusion</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Reconnaissance faciale</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Contrôle d'accès (badgeuse, RFID, biométrique)</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Systèmes d'alarmes (détecteur de mouvement, bris de glace)</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Support technique</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Intégration avec d'autres systèmes (domotique, anti-incendie)</span>
+                            </div>
+                        </div>
+                        <a href="{{ url_for('video_surveillance') }}" class="btn btn-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Géolocalisation -->
+        <div class="service-item mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="{{ url_for('static', filename='img/service-geolocation.png') }}" alt="Géolocalisation" class="img-fluid rounded shadow" onerror="this.src='https://via.placeholder.com/600x400?text=Géolocalisation'">
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-content">
+                        <div class="service-icon mb-3 text-primary">
+                            <i class="fas fa-map-marker-alt fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Géolocalisation / Tracking GPS</h3>
+                        <p class="mb-4">Optimisez la gestion de votre flotte de véhicules et suivez vos actifs mobiles en temps réel grâce à nos solutions de géolocalisation avancées. Nos systèmes de tracking GPS vous permettent de surveiller, analyser et optimiser vos opérations logistiques.</p>
+                        <div class="service-features mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Détection de position en temps réel</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Suivi de la position géographique (smartphone, véhicule, balise GPS)</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Geofencing (zones virtuelles avec actions automatiques)</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Optimisation d'itinéraires</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Notifications et alertes (SMS, email, commandes système)</span>
+                            </div>
+                        </div>
+                        <a href="{{ url_for('geolocation') }}" class="btn btn-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Support Technique -->
+        <div class="service-item">
+            <div class="row align-items-center flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="{{ url_for('static', filename='img/service-support.png') }}" alt="Support Technique" class="img-fluid rounded shadow" onerror="this.src='https://via.placeholder.com/600x400?text=Support+Technique'">
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-content">
+                        <div class="service-icon mb-3 text-primary">
+                            <i class="fas fa-headset fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Support Technique et Audit Informatique</h3>
+                        <p class="mb-4">Notre équipe d'experts est à votre disposition pour vous fournir un support technique réactif et efficace. Nous offrons également des services d'audit informatique pour évaluer et optimiser votre infrastructure IT.</p>
+                        <div class="service-features mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Assistance et conseil</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Audit et optimisation des services</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Formation du personnel</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Gestion du parc informatique</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Maintenance préventive et corrective</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-circle text-primary me-2" style="font-size: 10px;"></i>
+                                <span>Support à distance et sur site</span>
+                            </div>
+                        </div>
+                        <a href="{{ url_for('it_support') }}" class="btn btn-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-choose-us py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Pourquoi Choisir TCHID Connect?</h2>
+            <p class="section-subtitle">Ce qui nous distingue de la concurrence</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Reason 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card reason-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="reason-icon mb-3 text-primary">
+                            <i class="fas fa-user-tie fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Expertise Technique</h3>
+                        <p class="card-text">Notre équipe est composée d'experts certifiés dans diverses technologies, avec une expérience approfondie dans la conception et l'implémentation de solutions IT complexes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reason 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card reason-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="reason-icon mb-3 text-primary">
+                            <i class="fas fa-thumbs-up fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Service de Qualité</h3>
+                        <p class="card-text">Nous nous engageons à fournir un service de qualité supérieure, en veillant à ce que chaque projet soit livré selon les plus hauts standards de l'industrie.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reason 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card reason-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="reason-icon mb-3 text-primary">
+                            <i class="fas fa-coins fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Coût Réduit</h3>
+                        <p class="card-text">Nous offrons des solutions rentables sans compromettre la qualité, vous permettant d'optimiser votre budget IT tout en bénéficiant de services professionnels.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reason 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card reason-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="reason-icon mb-3 text-primary">
+                            <i class="fas fa-clock fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Support 24/7</h3>
+                        <p class="card-text">Notre équipe de support est disponible 24/7 pour répondre à vos besoins urgents, assurant que vos systèmes critiques restent opérationnels à tout moment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reason 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card reason-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="reason-icon mb-3 text-primary">
+                            <i class="fas fa-puzzle-piece fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Solutions Personnalisées</h3>
+                        <p class="card-text">Nous développons des solutions sur mesure adaptées à vos besoins spécifiques, plutôt que d'adopter une approche universelle qui pourrait ne pas convenir à votre entreprise.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reason 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card reason-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="reason-icon mb-3 text-primary">
+                            <i class="fas fa-shield-alt fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Sécurité Prioritaire</h3>
+                        <p class="card-text">La sécurité est au cœur de tout ce que nous faisons. Nous mettons en œuvre les meilleures pratiques pour protéger vos données et vos systèmes contre les menaces.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section py-5 bg-primary text-white text-center">
+    <div class="container">
+        <h2 class="mb-4">Besoin d'une solution IT sur mesure?</h2>
+        <p class="lead mb-4">Contactez-nous dès aujourd'hui pour discuter de vos besoins spécifiques et obtenir un devis personnalisé.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Contactez-nous</a>
+    </div>
+</section>
+{% endblock %}

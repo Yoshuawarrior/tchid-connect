@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block title %}Géolocalisation - TCHID Connect IT Consulting{% endblock %}
+
+{% block content %}
+<!-- Service Hero Section -->
+<section class="service-hero-section py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4">Géolocalisation</h1>
+                <p class="lead">Solutions de tracking et géolocalisation pour optimiser vos opérations</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Overview -->
+<section class="service-overview py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="{{ url_for('static', filename='img/géolocalisation.png') }}" alt="Géolocalisation" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title">Suivi et Localisation Précis</h2>
+                <p class="mb-4">TCHID Connect IT Consulting propose des solutions de géolocalisation avancées pour le suivi de véhicules, d'équipements et de personnel. Nos systèmes GPS permettent une surveillance en temps réel et une optimisation des opérations.</p>
+                <p>Nos solutions de géolocalisation offrent une visibilité complète sur vos actifs mobiles, avec des fonctionnalités de reporting détaillées et des alertes personnalisables.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Features -->
+<section class="service-features py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Solutions de Géolocalisation</h2>
+            <p class="section-subtitle">Des systèmes de tracking performants pour votre tranquillité d'esprit</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Feature 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-map-marker-alt fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Suivi de Véhicules</h3>
+                        <p class="card-text">Localisation en temps réel de votre flotte avec historique des trajets et rapports détaillés.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-mobile-alt fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Tracking Personnel</h3>
+                        <p class="card-text">Suivi sécurisé du personnel sur le terrain avec géofencing et alertes automatiques.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-box fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Suivi d'Équipements</h3>
+                        <p class="card-text">Localisation et surveillance de vos équipements précieux avec alertes anti-vol.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-chart-line fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Rapports et Analytics</h3>
+                        <p class="card-text">Analyses détaillées des déplacements avec rapports personnalisables et KPIs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-shield-alt fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Géofencing</h3>
+                        <p class="card-text">Création de zones virtuelles avec alertes automatiques d'entrée et de sortie.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-headset fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Support 24/7</h3>
+                        <p class="card-text">Assistance technique disponible 24h/24 et 7j/7 pour tous vos besoins de géolocalisation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technologies -->
+<section class="technologies-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Technologies Utilisées</h2>
+            <p class="section-subtitle">Les meilleures technologies pour des solutions fiables</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6 text-center">
+                <div class="tech-item p-3">
+                    <i class="fas fa-satellite fa-3x text-primary mb-3"></i>
+                    <h5>GPS/GLONASS</h5>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center">
+                <div class="tech-item p-3">
+                    <i class="fas fa-wifi fa-3x text-primary mb-3"></i>
+                    <h5>4G/5G</h5>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center">
+                <div class="tech-item p-3">
+                    <i class="fas fa-cloud fa-3x text-primary mb-3"></i>
+                    <h5>Cloud Computing</h5>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center">
+                <div class="tech-item p-3">
+                    <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                    <h5>Applications Mobiles</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section py-5 bg-primary text-white text-center">
+    <div class="container">
+        <h2 class="mb-4">Prêt à optimiser vos opérations avec la géolocalisation ?</h2>
+        <p class="lead mb-4">Contactez-nous pour une consultation gratuite et découvrez comment nos solutions peuvent améliorer votre efficacité.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Demander un devis</a>
+    </div>
+</section>
+{% endblock %}

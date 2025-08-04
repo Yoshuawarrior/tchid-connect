@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+
+{% block title %}Formation Câblage Réseau - TCHID Academy{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="py-5" style="background: var(--gradient-primary);">
+    <div class="container">
+        <div class="row align-items-center text-white">
+            <div class="col-lg-8">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-white-50">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-white-50">Accueil</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url_for('tchid_academy') }}" class="text-white-50">TCHID Academy</a></li>
+                        <li class="breadcrumb-item active text-white">Câblage Réseau</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold mb-3">Formation Câblage Réseau</h1>
+                <p class="lead">Maîtrisez les techniques professionnelles de câblage structuré</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-ethernet" style="font-size: 6rem; opacity: 0.3;"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Informations Formation -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="modern-card p-4 mb-4">
+                    <h3 class="mb-4">Description de la Formation</h3>
+                    <p class="lead">
+                        Formation pratique intensive pour acquérir toutes les compétences en câblage réseau structuré, 
+                        de l'installation à la certification des liaisons.
+                    </p>
+                    
+                    <h4 class="mt-4 mb-3">Objectifs Pédagogiques</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-3"></i>Maîtriser les normes de câblage (TIA/EIA, ISO)</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-3"></i>Installer des câblages Cat5e, Cat6, Cat6A</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-3"></i>Sertir et connecter les prises RJ45</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-3"></i>Tester et certifier les installations</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-3"></i>Installer la fibre optique</li>
+                    </ul>
+                    
+                    <h4 class="mt-4 mb-3">Programme Détaillé</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-primary">Module 1 : Théorie (20h)</h6>
+                            <ul class="small">
+                                <li>Normes et standards</li>
+                                <li>Types de câbles</li>
+                                <li>Architecture structurée</li>
+                                <li>Planification d'installation</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mt-3">Module 2 : Cuivre (30h)</h6>
+                            <ul class="small">
+                                <li>Installation câbles Cat5e/Cat6</li>
+                                <li>Sertissage RJ45</li>
+                                <li>Panneaux de brassage</li>
+                                <li>Prises murales</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-primary">Module 3 : Fibre Optique (20h)</h6>
+                            <ul class="small">
+                                <li>Types de fibres</li>
+                                <li>Épissage et connectique</li>
+                                <li>Tiroirs optiques</li>
+                                <li>Mesures optiques</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mt-3">Module 4 : Tests (10h)</h6>
+                            <ul class="small">
+                                <li>Testeurs de câbles</li>
+                                <li>Certification Fluke</li>
+                                <li>Rapports de recette</li>
+                                <li>Dépannage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modern-card p-4">
+                    <h4 class="mb-3">Outils et Matériel Fournis</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-tools text-primary me-3"></i>Kit de sertissage professionnel</li>
+                                <li><i class="fas fa-cut text-primary me-3"></i>Dénudeurs et pinces</li>
+                                <li><i class="fas fa-search text-primary me-3"></i>Testeurs de continuité</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-plug text-primary me-3"></i>Connecteurs RJ45</li>
+                                <li><i class="fas fa-ethernet text-primary me-3"></i>Câbles de test</li>
+                                <li><i class="fas fa-certificate text-primary me-3"></i>Certificateur Fluke</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="modern-card p-4 mb-4">
+                    <h5 class="mb-3">Informations Pratiques</h5>
+                    <div class="mb-3">
+                        <strong class="text-primary">Durée :</strong> 2 mois (80h)
+                    </div>
+                    <div class="mb-3">
+                        <strong class="text-primary">Prix :</strong> 
+                        <span class="text-success fw-bold">30,000 FCFA</span>
+                        <small class="text-decoration-line-through text-muted ms-2">60,000 FCFA</small>
+                        <span class="badge bg-danger ms-2">Promo vacances -50%</span>
+                    </div>
+                    <div class="mb-3">
+                        <strong class="text-primary">Horaires :</strong><br>
+                        <small>Lun-Ven : 8h-12h ou 14h-18h<br>
+                        Weekend : 8h-16h</small>
+                    </div>
+                    <div class="mb-3">
+                        <strong class="text-primary">Prochaine session :</strong><br>
+                        <small>15 Septembre 2025</small>
+                    </div>
+                    <div class="mb-4">
+                        <strong class="text-primary">Places disponibles :</strong><br>
+                        <span class="badge bg-success">10 places restantes</span>
+                    </div>
+                    
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 mb-3">
+                        <i class="fas fa-user-plus me-2"></i>S'inscrire Maintenant
+                    </a>
+                    
+                    <a href="tel:+242065286666" class="btn btn-outline-primary w-100">
+                        <i class="fas fa-phone me-2"></i>Appeler
+                    </a>
+                </div>
+                
+                <div class="modern-card p-4 mb-4">
+                    <h6 class="mb-3">Certification</h6>
+                    <div class="text-center mb-3">
+                        <i class="fas fa-award text-warning" style="font-size: 3rem;"></i>
+                    </div>
+                    <p class="small text-center">
+                        Certificat de Technicien en Câblage Structuré + Kit d'outils offert
+                    </p>
+                </div>
+                
+                <div class="modern-card p-4">
+                    <h6 class="mb-3">Débouchés</h6>
+                    <ul class="list-unstyled small">
+                        <li><i class="fas fa-briefcase text-success me-2"></i>Technicien câbleur</li>
+                        <li><i class="fas fa-briefcase text-success me-2"></i>Installateur réseau</li>
+                        <li><i class="fas fa-briefcase text-success me-2"></i>Technicien fibre optique</li>
+                        <li><i class="fas fa-briefcase text-success me-2"></i>Entrepreneur indépendant</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

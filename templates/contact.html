@@ -1,0 +1,206 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact - TCHID Connect IT Consulting{% endblock %}
+
+{% block content %}
+<!-- Contact Hero Section -->
+<section class="contact-hero-section py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4">Contactez-nous</h1>
+                <p class="lead">Nous sommes à votre écoute pour répondre à vos questions et vous accompagner dans vos projets</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="contact-info py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="contact-icon mb-3 text-primary">
+                            <i class="fas fa-map-marker-alt fa-3x"></i>
+                        </div>
+                        <h3 class="h5 mb-3">Notre Adresse</h3>
+                        <p class="mb-0">Pointe Noire, Ngoyo</p>
+                        <p>(Arrêt deux conteneurs)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="contact-icon mb-3 text-primary">
+                            <i class="fas fa-phone fa-3x"></i>
+                        </div>
+                        <h3 class="h5 mb-3">Téléphone</h3>
+                        <p class="mb-0">+242 06 528 66 66</p>
+                        <p>+242 05 047 18 18</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="contact-icon mb-3 text-primary">
+                            <i class="fas fa-envelope fa-3x"></i>
+                        </div>
+                        <h3 class="h5 mb-3">Email</h3>
+                        <p class="mb-0"><a href="mailto:contacts@tchidconnect.com" class="text-decoration-none">contacts@tchidconnect.com</a></p>
+                        <p><a href="http://www.tchidconnect.com" class="text-decoration-none">www.tchidconnect.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section class="contact-form py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4 p-md-5">
+                        <h2 class="text-center mb-4">Envoyez-nous un message</h2>
+                        
+                        <!-- Messages Flash -->
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                                {% for category, message in messages %}
+                                    <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} mb-4" role="alert">
+                                        <i class="fas fa-{{ 'check-circle' if category == 'success' else 'exclamation-circle' }} me-2"></i>
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                        
+                        <form action="{{ url_for('contact') }}" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
+                                        <label for="name">Nom complet</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>
+                                        <label for="email">Adresse email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Votre téléphone">
+                                        <label for="phone">Numéro de téléphone</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Sujet" required>
+                                        <label for="subject">Sujet</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating mb-3">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Votre message" style="height: 150px" required></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="privacy" required>
+                                        <label class="form-check-label" for="privacy">
+                                            J'accepte que mes données soient traitées conformément à la politique de confidentialité
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Envoyer le message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nous Trouver</h2>
+            <p class="section-subtitle">Rendez-nous visite à notre bureau</p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="map-container rounded shadow">
+                    <!-- Placeholder for the map - In a real implementation, you would use Google Maps or OpenStreetMap -->
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127504.85340358636!2d11.798543241796868!3d-4.802868399999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a60c3a5e5264639%3A0x4e8e079f4ad33424!2sPointe-Noire%2C%20Congo!5e0!3m2!1sfr!2sfr!4v1653044896754!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Media Section -->
+<section class="social-media-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Suivez-nous</h2>
+            <p class="section-subtitle">Restez connecté avec nous sur les réseaux sociaux</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="social-media-links d-flex justify-content-center gap-4">
+                    <a href="#" class="social-link">
+                        <div class="social-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-link">
+                        <div class="social-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="fab fa-linkedin-in fa-2x"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-link">
+                        <div class="social-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="fab fa-tiktok fa-2x"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-link">
+                        <div class="social-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="fab fa-telegram fa-2x"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section py-5 bg-primary text-white text-center">
+    <div class="container">
+        <h2 class="mb-4">Besoin d'une assistance rapide?</h2>
+        <p class="lead mb-4">Notre équipe de support est disponible 24/7 pour répondre à vos besoins urgents.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="tel:+24206840710" class="btn btn-light btn-lg">
+                <i class="fas fa-phone me-2"></i> Appelez-nous
+            </a>
+            <a href="https://wa.me/24206840710" class="btn btn-outline-light btn-lg">
+                <i class="fab fa-whatsapp me-2"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

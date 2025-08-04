@@ -1,0 +1,327 @@
+{% extends 'base.html' %}
+
+{% block title %}Vidéo-surveillance - TCHID Connect IT Consulting{% endblock %}
+
+{% block content %}
+<!-- Service Hero Section -->
+<section class="service-hero-section py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4">Vidéo-surveillance</h1>
+                <p class="lead">Solutions de sécurité avancées pour protéger vos locaux et vos actifs</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Overview -->
+<section class="service-overview py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="{{ url_for('static', filename='img/Visuel installation Camere CCTV.png') }}" alt="Installation Caméra CCTV" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title">Protection Complète et Intelligente</h2>
+                <p class="mb-4">TCHID Connect IT Consulting propose des solutions de vidéo-surveillance avancées pour sécuriser vos locaux et protéger vos actifs. Nos systèmes de sécurité sont conçus sur mesure pour répondre à vos besoins spécifiques en matière de sécurité.</p>
+                <p>Nos experts en sécurité utilisent les technologies les plus récentes pour vous offrir une protection complète, avec des fonctionnalités intelligentes comme la reconnaissance faciale, la détection de mouvement et l'analyse vidéo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Features -->
+<section class="service-features py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Solutions de Sécurité</h2>
+            <p class="section-subtitle">Des systèmes de protection avancés pour votre tranquillité d'esprit</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Feature 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-video fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Systèmes Anti-intrusion</h3>
+                        <p class="card-text">Protection avancée contre les intrusions avec des caméras haute définition et des capteurs de mouvement pour une surveillance 24/7.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Caméras HD/4K</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Vision nocturne</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Détection de mouvement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-user-shield fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Reconnaissance Faciale</h3>
+                        <p class="card-text">Technologie de reconnaissance faciale avancée pour identifier les personnes autorisées et détecter les intrus potentiels.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Identification biométrique</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Base de données sécurisée</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Alertes en temps réel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-id-card fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Contrôle d'Accès</h3>
+                        <p class="card-text">Systèmes de contrôle d'accès sécurisés utilisant des badges, la technologie RFID ou la biométrie pour gérer les entrées et sorties.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Badgeuses</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Lecteurs RFID</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Scanners biométriques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-bell fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Systèmes d'Alarmes</h3>
+                        <p class="card-text">Systèmes d'alarme intelligents avec détecteurs de mouvement, capteurs de bris de glace et sirènes pour une protection complète.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Détecteurs de mouvement</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Capteurs de bris de glace</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Notifications mobiles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-headset fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Support Technique</h3>
+                        <p class="card-text">Assistance technique dédiée pour assurer le bon fonctionnement de vos systèmes de sécurité et résoudre rapidement tout problème.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Maintenance préventive</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Intervention rapide</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Support 24/7</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-home fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Intégration Systèmes</h3>
+                        <p class="card-text">Intégration de vos systèmes de sécurité avec d'autres systèmes comme la domotique ou les systèmes anti-incendie pour une solution complète.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Domotique</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Systèmes anti-incendie</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Contrôle centralisé</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technologies -->
+<section class="technologies-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Technologies et Partenaires</h2>
+            <p class="section-subtitle">Nous travaillons avec les meilleurs fabricants de systèmes de sécurité</p>
+        </div>
+
+        <div class="row align-items-center justify-content-center g-4">
+            <div class="col-6 col-md-3 col-lg-2 text-center">
+                <div class="tech-logo">
+                    <img src="{{ url_for('static', filename='img/partner-hikvision.png') }}" alt="Hikvision" class="img-fluid" onerror="this.src='https://via.placeholder.com/150x75?text=Hikvision'">
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 text-center">
+                <div class="tech-logo">
+                    <img src="{{ url_for('static', filename='img/partner-dahua.png') }}" alt="Dahua" class="img-fluid" onerror="this.src='https://via.placeholder.com/150x75?text=Dahua'">
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 text-center">
+                <div class="tech-logo">
+                    <img src="{{ url_for('static', filename='img/partner-axis.png') }}" alt="Axis" class="img-fluid" onerror="this.src='https://via.placeholder.com/150x75?text=Axis'">
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 text-center">
+                <div class="tech-logo">
+                    <img src="{{ url_for('static', filename='img/partner-bosch.png') }}" alt="Bosch" class="img-fluid" onerror="this.src='https://via.placeholder.com/150x75?text=Bosch'">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Case Studies -->
+<section class="case-studies-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Réalisations</h2>
+            <p class="section-subtitle">Découvrez comment nous avons sécurisé les installations de nos clients</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Case Study 1 -->
+            <div class="col-md-6">
+                <div class="card case-study-card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h3 class="card-title h5 mb-3">Système de sécurité complet pour un complexe commercial</h3>
+                        <p class="card-text mb-3">Nous avons conçu et installé un système de vidéo-surveillance complet avec contrôle d'accès pour un grand centre commercial, assurant la sécurité des clients et des commerces.</p>
+                        <div class="case-study-results mt-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Plus de 100 caméras HD installées</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Réduction de 70% des incidents de sécurité</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Contrôle d'accès pour 50 points d'entrée</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="col-md-6">
+                <div class="card case-study-card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h3 class="card-title h5 mb-3">Sécurisation d'un site industriel sensible</h3>
+                        <p class="card-text mb-3">Nous avons implémenté une solution de sécurité avancée pour un site industriel, combinant vidéo-surveillance, contrôle d'accès biométrique et système d'alarme intégré.</p>
+                        <div class="case-study-results mt-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Surveillance périmétrique complète</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Authentification biométrique pour zones sensibles</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Intégration avec le système anti-incendie</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            <p class="section-subtitle">Réponses à vos questions sur nos solutions de vidéo-surveillance</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="surveillanceFaq">
+                    <!-- Question 1 -->
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                Quelle est la différence entre les caméras analogiques et les caméras IP?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#surveillanceFaq">
+                            <div class="accordion-body">
+                                Les caméras analogiques utilisent un signal vidéo traditionnel transmis par câble coaxial, tandis que les caméras IP sont des appareils numériques qui se connectent directement à un réseau informatique. Les caméras IP offrent généralement une meilleure qualité d'image, des fonctionnalités avancées comme l'analyse vidéo, et une plus grande flexibilité d'installation. Elles permettent également l'accès à distance via Internet. Nous proposons les deux types de systèmes et pouvons vous conseiller sur la solution la plus adaptée à vos besoins.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                Comment puis-je accéder aux images de mon système de vidéo-surveillance à distance?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#surveillanceFaq">
+                            <div class="accordion-body">
+                                Nos systèmes de vidéo-surveillance modernes permettent un accès à distance via une application mobile ou un navigateur web. Vous pouvez visualiser les images en direct, revoir les enregistrements, et même recevoir des notifications en cas d'événements détectés. Nous configurons l'accès à distance de manière sécurisée, avec authentification forte et connexion cryptée, pour garantir que seules les personnes autorisées peuvent accéder à votre système.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Combien de temps les enregistrements vidéo sont-ils conservés?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#surveillanceFaq">
+                            <div class="accordion-body">
+                                La durée de conservation des enregistrements dépend de la capacité de stockage de votre système et de vos besoins spécifiques. Typiquement, nos systèmes peuvent conserver les enregistrements de 7 à 90 jours. Nous pouvons configurer le système pour optimiser l'espace de stockage, par exemple en n'enregistrant que lors de la détection de mouvement ou en utilisant des taux de compression variables selon l'importance des zones surveillées. Nous vous conseillons sur la solution de stockage la plus adaptée à vos exigences légales et opérationnelles.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="accordion-item border-0 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                Proposez-vous des solutions de reconnaissance faciale conformes au RGPD?
+                            </button>
+                        </h3>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#surveillanceFaq">
+                            <div class="accordion-body">
+                                Oui, nos solutions de reconnaissance faciale sont conçues pour être conformes aux réglementations sur la protection des données, y compris le RGPD. Nous mettons en place des mesures strictes pour protéger les données biométriques, comme le chiffrement, l'accès restreint, et la conservation limitée des données. Nous vous accompagnons également dans la mise en place des procédures nécessaires (information des personnes, registre de traitement, etc.) pour assurer la conformité légale de votre système.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section py-5 bg-primary text-white text-center">
+    <div class="container">
+        <h2 class="mb-4">Besoin de sécuriser vos locaux?</h2>
+        <p class="lead mb-4">Contactez-nous dès aujourd'hui pour une évaluation gratuite de vos besoins en sécurité.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Contactez-nous</a>
+    </div>
+</section>
+{% endblock %}

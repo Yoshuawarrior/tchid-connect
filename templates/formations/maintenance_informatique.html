@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+
+{% block title %}Formation Maintenance Informatique - TCHID Academy{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="py-5" style="background: var(--gradient-primary);">
+    <div class="container">
+        <div class="row align-items-center text-white">
+            <div class="col-lg-8">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-white-50">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-white-50">Accueil</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url_for('tchid_academy') }}" class="text-white-50">TCHID Academy</a></li>
+                        <li class="breadcrumb-item active text-white">Maintenance Informatique</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold mb-3">Formation Maintenance Informatique</h1>
+                <p class="lead">Devenez expert en diagnostic, réparation et maintenance des équipements informatiques</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-tools" style="font-size: 6rem; opacity: 0.3;"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Informations Formation -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="modern-card p-4 mb-4">
+                    <h3 class="mb-4">Description de la Formation</h3>
+                    <p class="lead">
+                        Cette formation vous permettra d'acquérir toutes les compétences nécessaires pour diagnostiquer, 
+                        réparer et maintenir les équipements informatiques dans un environnement professionnel.
+                    </p>
+                    
+                    <h4 class="mt-4 mb-3">Objectifs Pédagogiques</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-3"></i>Maîtriser le diagnostic des pannes matérielles et logicielles</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-3"></i>Savoir réparer et remplacer les composants défectueux</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-3"></i>Installer et configurer les systèmes d'exploitation</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-3"></i>Mettre en place une maintenance préventive efficace</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-3"></i>Gérer un parc informatique</li>
+                    </ul>
+                    
+                    <h4 class="mt-4 mb-3">Programme Détaillé</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-primary">Module 1 : Hardware (40h)</h6>
+                            <ul class="small">
+                                <li>Architecture des ordinateurs</li>
+                                <li>Composants et périphériques</li>
+                                <li>Diagnostic matériel</li>
+                                <li>Réparation et remplacement</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mt-3">Module 2 : Software (40h)</h6>
+                            <ul class="small">
+                                <li>Systèmes d'exploitation</li>
+                                <li>Installation et configuration</li>
+                                <li>Drivers et pilotes</li>
+                                <li>Logiciels et applications</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-primary">Module 3 : Maintenance (40h)</h6>
+                            <ul class="small">
+                                <li>Maintenance préventive</li>
+                                <li>Outils de diagnostic</li>
+                                <li>Planification des interventions</li>
+                                <li>Documentation technique</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mt-3">Projet Final</h6>
+                            <p class="small">Diagnostic et réparation complète d'un parc informatique simulé</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modern-card p-4">
+                    <h4 class="mb-3">Prérequis</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-graduation-cap text-primary me-3"></i>Niveau Baccalauréat ou équivalent</li>
+                        <li><i class="fas fa-computer text-primary me-3"></i>Connaissances de base en informatique</li>
+                        <li><i class="fas fa-language text-primary me-3"></i>Français parlé et écrit</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="modern-card p-4 mb-4">
+                    <h5 class="mb-3">Informations Pratiques</h5>
+                    <div class="mb-3">
+                        <strong class="text-primary">Durée :</strong> 3 mois (120h)
+                    </div>
+                    <div class="mb-3">
+                        <strong class="text-primary">Prix :</strong> 
+                        <span class="text-success fw-bold">35,000 FCFA</span>
+                        <small class="text-decoration-line-through text-muted ms-2">70,000 FCFA</small>
+                        <span class="badge bg-danger ms-2">Promo vacances -50%</span>
+                    </div>
+                    <div class="mb-3">
+                        <strong class="text-primary">Horaires :</strong><br>
+                        <small>Lun-Ven : 8h-12h ou 14h-18h<br>
+                        Weekend : 8h-16h</small>
+                    </div>
+                    <div class="mb-3">
+                        <strong class="text-primary">Prochaine session :</strong><br>
+                        <small>1er Août 2025</small>
+                    </div>
+                    <div class="mb-4">
+                        <strong class="text-primary">Places disponibles :</strong><br>
+                        <span class="badge bg-success">8 places restantes</span>
+                    </div>
+                    
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary w-100 mb-3">
+                        <i class="fas fa-user-plus me-2"></i>S'inscrire Maintenant
+                    </a>
+                    
+                    <a href="tel:+242065286666" class="btn btn-outline-primary w-100">
+                        <i class="fas fa-phone me-2"></i>Appeler
+                    </a>
+                </div>
+                
+                <div class="modern-card p-4">
+                    <h6 class="mb-3">Certification</h6>
+                    <div class="text-center mb-3">
+                        <i class="fas fa-certificate text-warning" style="font-size: 3rem;"></i>
+                    </div>
+                    <p class="small text-center">
+                        Certificat de Technicien en Maintenance Informatique reconnu par les entreprises du secteur
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Témoignages -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h3 class="text-center mb-5">Témoignages d'Anciens Étudiants</h3>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="modern-card p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                            <span class="text-white fw-bold">JM</span>
+                        </div>
+                        <div>
+                            <h6 class="mb-0">Jean-Marie K.</h6>
+                            <small class="text-muted">Technicien IT chez Orange Congo</small>
+                        </div>
+                    </div>
+                    <p class="small">
+                        "Formation très complète qui m'a permis de décrocher un emploi dans une grande entreprise. 
+                        Les formateurs sont excellents et le matériel de qualité."
+                    </p>
+                    <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="modern-card p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                            <span class="text-white fw-bold">MN</span>
+                        </div>
+                        <div>
+                            <h6 class="mb-0">Marie N.</h6>
+                            <small class="text-muted">Technicienne indépendante</small>
+                        </div>
+                    </div>
+                    <p class="small">
+                        "J'ai pu créer ma propre entreprise de maintenance informatique grâce aux compétences acquises. 
+                        Le suivi post-formation est exceptionnel."
+                    </p>
+                    <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

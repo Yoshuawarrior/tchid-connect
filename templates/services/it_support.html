@@ -1,0 +1,350 @@
+{% extends "base.html" %}
+
+{% block title %}Support Technique IT - TCHID Connect{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">Support Technique IT</h1>
+                <p class="lead mb-4">Assistance informatique professionnelle, maintenance préventive et corrective, audit de sécurité pour garantir la performance optimale de votre infrastructure IT.</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-secondary btn-lg">Demander une intervention</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='img/support-technique.jpg') }}" alt="Support Technique TCHID Connect" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Overview -->
+<section class="service-overview py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='img/maintenance-informatique.jpg') }}" alt="Maintenance Informatique" class="img-fluid rounded shadow mb-4 mb-lg-0">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title mb-4">Votre Partenaire IT de Confiance</h2>
+                <p class="mb-4">TCHID Connect vous accompagne dans la gestion quotidienne de votre infrastructure informatique. Notre équipe d'experts intervient rapidement pour résoudre vos problèmes techniques et optimiser les performances de vos systèmes.</p>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-tools text-primary me-3 fa-2x"></i>
+                            <div>
+                                <h5 class="mb-1">Maintenance</h5>
+                                <p class="mb-0 text-muted">Préventive et corrective</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-headset text-primary me-3 fa-2x"></i>
+                            <div>
+                                <h5 class="mb-1">Support 24/7</h5>
+                                <p class="mb-0 text-muted">Assistance continue</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Features -->
+<section class="service-features py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Services de Support IT</h2>
+            <p class="section-subtitle">Une gamme complète de services pour maintenir votre infrastructure au top</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Feature 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-wrench fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Maintenance Préventive</h3>
+                        <p class="card-text">Interventions programmées pour éviter les pannes et optimiser les performances de vos équipements informatiques.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Nettoyage système</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Mises à jour sécurité</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Optimisation performances</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-ambulance fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Dépannage Urgent</h3>
+                        <p class="card-text">Intervention rapide en cas de panne critique pour minimiser l'impact sur votre activité professionnelle.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Intervention sous 2h</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Diagnostic complet</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Réparation sur site</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-shield-alt fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Audit de Sécurité</h3>
+                        <p class="card-text">Évaluation complète de votre infrastructure pour identifier les vulnérabilités et recommander les améliorations.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Analyse des risques</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Rapport détaillé</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Plan d'action</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-cloud fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Sauvegarde & Récupération</h3>
+                        <p class="card-text">Solutions de sauvegarde automatisées et procédures de récupération pour protéger vos données critiques.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Sauvegarde automatique</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Stockage sécurisé</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Test de récupération</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-users fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Formation Utilisateurs</h3>
+                        <p class="card-text">Formation de vos équipes sur les bonnes pratiques informatiques et l'utilisation optimale de vos outils.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Sessions personnalisées</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Support documentaire</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Suivi post-formation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3 text-primary">
+                            <i class="fas fa-chart-line fa-3x"></i>
+                        </div>
+                        <h3 class="card-title h5">Monitoring & Supervision</h3>
+                        <p class="card-text">Surveillance continue de votre infrastructure avec alertes proactives et rapports de performance.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Surveillance 24/7</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Alertes automatiques</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Rapports mensuels</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technologies -->
+<section class="technologies py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Technologies Supportées</h2>
+            <p class="section-subtitle">Expertise sur un large éventail de technologies et systèmes</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="tech-card text-center p-4">
+                    <i class="fab fa-windows fa-3x text-primary mb-3"></i>
+                    <h5>Windows Server</h5>
+                    <p class="text-muted">2012, 2016, 2019, 2022</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="tech-card text-center p-4">
+                    <i class="fab fa-linux fa-3x text-primary mb-3"></i>
+                    <h5>Linux</h5>
+                    <p class="text-muted">Ubuntu, CentOS, RHEL</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="tech-card text-center p-4">
+                    <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                    <h5>Bases de Données</h5>
+                    <p class="text-muted">SQL Server, MySQL, Oracle</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="tech-card text-center p-4">
+                    <i class="fas fa-cloud fa-3x text-primary mb-3"></i>
+                    <h5>Cloud</h5>
+                    <p class="text-muted">Azure, AWS, Office 365</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="process py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Notre Processus d'Intervention</h2>
+            <p class="section-subtitle">Une approche méthodique pour résoudre efficacement vos problèmes IT</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="process-step text-center">
+                    <div class="step-number">1</div>
+                    <h5>Diagnostic</h5>
+                    <p>Analyse complète du problème et identification des causes</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="process-step text-center">
+                    <div class="step-number">2</div>
+                    <h5>Proposition</h5>
+                    <p>Présentation des solutions avec devis détaillé</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="process-step text-center">
+                    <div class="step-number">3</div>
+                    <h5>Intervention</h5>
+                    <p>Mise en œuvre de la solution avec suivi en temps réel</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="process-step text-center">
+                    <div class="step-number">4</div>
+                    <h5>Validation</h5>
+                    <p>Tests complets et formation si nécessaire</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            <p class="section-subtitle">Réponses aux questions les plus courantes sur notre support IT</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                Quels sont vos délais d'intervention ?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Nous intervenons sous 2h pour les urgences critiques, 4h pour les problèmes importants et sous 24h pour la maintenance préventive. Un contrat de support peut garantir des délais encore plus courts.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                Proposez-vous des contrats de maintenance ?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Oui, nous proposons différents niveaux de contrats de maintenance adaptés à vos besoins : Basic (maintenance préventive), Standard (+ support téléphonique), Premium (+ interventions prioritaires).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                Intervenez-vous à distance ?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Oui, nous utilisons des outils de prise en main à distance sécurisés pour résoudre rapidement de nombreux problèmes sans déplacement, ce qui réduit les coûts et les délais.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                Que comprend un audit de sécurité ?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Notre audit inclut l'analyse des vulnérabilités, l'évaluation des politiques de sécurité, les tests de pénétration, la vérification des sauvegardes et un rapport détaillé avec plan d'action prioritaire.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Besoin d'une Assistance IT ?</h2>
+        <p class="lead mb-4">Notre équipe d'experts est prête à intervenir pour résoudre vos problèmes informatiques</p>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <a href="tel:+24206528666" class="btn btn-secondary btn-lg w-100">
+                            <i class="fas fa-phone me-2"></i> Appeler Maintenant
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg w-100">
+                            <i class="fas fa-envelope me-2"></i> Demander un Devis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

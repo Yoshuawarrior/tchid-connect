@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Test TCHID Academy - Prix Mis à Jour{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-center mb-5">Test TCHID Academy - Nouveaux Prix</h1>
+    
+    <div class="row g-4">
+        <!-- Test Maintenance Informatique -->
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Maintenance Informatique</h5>
+                    <div class="mb-3">
+                        <span class="h4 text-success">35,000 FCFA</span>
+                        <small class="text-decoration-line-through text-muted ms-2">70,000 FCFA</small>
+                        <span class="badge bg-danger ms-2">Promo vacances -50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Test Administration Réseau -->
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Administration Réseau</h5>
+                    <div class="mb-3">
+                        <span class="h4 text-success">60,000 FCFA</span>
+                        <small class="text-decoration-line-through text-muted ms-2">120,000 FCFA</small>
+                        <span class="badge bg-danger ms-2">Promo vacances -50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Test Configuration IP Phone -->
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Configuration IP Phone</h5>
+                    <div class="mb-3">
+                        <span class="h4 text-success">30,000 FCFA</span>
+                        <small class="text-decoration-line-through text-muted ms-2">60,000 FCFA</small>
+                        <span class="badge bg-danger ms-2">Promo vacances -50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Test CCTV -->
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">CCTV - Vidéosurveillance</h5>
+                    <div class="mb-3">
+                        <span class="h4 text-success">50,000 FCFA</span>
+                        <small class="text-decoration-line-through text-muted ms-2">100,000 FCFA</small>
+                        <span class="badge bg-danger ms-2">Promo vacances -50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-5">
+        <a href="{{ url_for('tchid_academy') }}" class="btn btn-primary btn-lg">Voir TCHID Academy Officiel</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,410 @@
+{% extends "base.html" %}
+
+{% block title %}TCHID Academy - Formations IT Professionnelles{% endblock %}
+
+{% block extra_css %}
+<style>
+    .academy-hero {
+        background: linear-gradient(135deg, var(--darker-color) 0%, var(--primary-color) 100%);
+        padding: 5rem 0;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .academy-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23ffffff" opacity="0.1"/><circle cx="80" cy="30" r="1.5" fill="%23ffffff" opacity="0.1"/><circle cx="40" cy="70" r="2.5" fill="%23ffffff" opacity="0.1"/><circle cx="70" cy="80" r="1" fill="%23ffffff" opacity="0.1"/></svg>');
+        opacity: 0.3;
+    }
+    
+    .formation-card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--border-color);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .formation-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--gradient-primary);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .formation-card:hover::before {
+        transform: scaleX(1);
+    }
+    
+    .formation-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-xl);
+    }
+    
+    .formation-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 2rem;
+        color: white;
+        background: var(--gradient-primary);
+    }
+    
+    .duration-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--gradient-secondary);
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    .price-tag {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+    
+    .academy-stats {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .stat-item {
+        text-align: center;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        display: block;
+    }
+    
+    .certification-badge {
+        background: var(--success-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="academy-hero">
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-3 fw-bold mb-4">TCHID Academy</h1>
+                <p class="lead mb-4">
+                    Développez vos compétences IT avec nos formations professionnelles certifiantes. 
+                    Apprenez auprès d'experts reconnus et obtenez les certifications qui feront la différence sur votre CV.
+                </p>
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <span class="certification-badge">
+                        <i class="fas fa-certificate"></i>
+                        Certifications Reconnues
+                    </span>
+                    <span class="certification-badge">
+                        <i class="fas fa-users"></i>
+                        Formateurs Experts
+                    </span>
+                    <span class="certification-badge">
+                        <i class="fas fa-laptop"></i>
+                        Pratique Intensive
+                    </span>
+                </div>
+                
+                <div class="academy-stats">
+                    <div class="row">
+                        <div class="col-md-3 col-6 stat-item mb-3">
+                            <span class="stat-number">500+</span>
+                            <small>Étudiants Formés</small>
+                        </div>
+                        <div class="col-md-3 col-6 stat-item mb-3">
+                            <span class="stat-number">5</span>
+                            <small>Formations Disponibles</small>
+                        </div>
+                        <div class="col-md-3 col-6 stat-item mb-3">
+                            <span class="stat-number">95%</span>
+                            <small>Taux de Réussite</small>
+                        </div>
+                        <div class="col-md-3 col-6 stat-item mb-3">
+                            <span class="stat-number">24/7</span>
+                            <small>Support Disponible</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-graduation-cap" style="font-size: 10rem; opacity: 0.3;"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Formations Disponibles -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Formations</h2>
+            <p class="section-subtitle">Choisissez la formation qui correspond à vos objectifs professionnels</p>
+        </div>
+        
+        <div class="row g-4">
+            {% for formation in formations %}
+            <div class="col-lg-6 col-md-6">
+                <div class="formation-card h-100 p-4">
+                    <div class="duration-badge">{{ formation.duration }}</div>
+                    
+                    {% if formation.image %}
+                    <div class="text-center mb-3">
+                        <img src="{{ url_for('static', filename='img/formations/' + formation.image) }}" 
+                             alt="{{ formation.name }}" 
+                             class="img-fluid rounded" 
+                             style="height: 200px; width: 100%; object-fit: cover;">
+                    </div>
+                    {% endif %}
+                    
+                    <div class="formation-icon">
+                        <i class="{{ formation.icon }}"></i>
+                    </div>
+                    
+                    <h4 class="text-center mb-3">{{ formation.name }}</h4>
+                    <p class="text-muted mb-4">{{ formation.description }}</p>
+                    
+                    <div class="mb-4">
+                        <h6 class="text-primary mb-2">Programme :</h6>
+                        <ul class="list-unstyled small">
+                            {% for skill in formation.skills %}
+                            <li class="mb-1">
+                                <i class="fas fa-check text-success me-2"></i>{{ skill }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <span class="price-tag text-success">{{ "{:,}".format(formation.price_promo) }} FCFA</span>
+                            <small class="text-decoration-line-through text-muted ms-2">{{ "{:,}".format(formation.price_original) }} FCFA</small>
+                            <span class="badge bg-danger ms-2">Promo vacances -{{ formation.discount }}%</span>
+                        </div>
+                        <small class="text-muted">
+                            <i class="fas fa-clock me-1"></i>{{ formation.duration }}
+                        </small>
+                    </div>
+                    
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary w-100">
+                        <i class="fas fa-user-plus me-2"></i>S'inscrire Maintenant
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Avantages TCHID Academy -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Pourquoi Choisir TCHID Academy ?</h2>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="modern-card p-4 text-center h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-chalkboard-teacher text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Formateurs Experts</h5>
+                    <p class="text-muted">Nos formateurs sont des professionnels certifiés avec plus de 10 ans d'expérience terrain.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="modern-card p-4 text-center h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-hands-helping text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Suivi Personnalisé</h5>
+                    <p class="text-muted">Accompagnement individuel et suivi post-formation pour garantir votre réussite professionnelle.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="modern-card p-4 text-center h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-certificate text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Certifications Reconnues</h5>
+                    <p class="text-muted">Obtenez des certifications reconnues par les entreprises et valorisées sur le marché de l'emploi.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="modern-card p-4 text-center h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-laptop-code text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Pratique Intensive</h5>
+                    <p class="text-muted">80% de pratique sur équipements professionnels pour une maîtrise complète des compétences.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="modern-card p-4 text-center h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-briefcase text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Aide à l'Emploi</h5>
+                    <p class="text-muted">Support dans la recherche d'emploi et mise en relation avec notre réseau d'entreprises partenaires.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="modern-card p-4 text-center h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-clock text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Horaires Flexibles</h5>
+                    <p class="text-muted">Formations disponibles en journée, soirée et weekend pour s'adapter à votre emploi du temps.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5" style="background: var(--gradient-primary);">
+    <div class="container">
+        <div class="row justify-content-center text-center text-white">
+            <div class="col-lg-8">
+                <h2 class="mb-4">Prêt à Booster Votre Carrière IT ?</h2>
+                <p class="lead mb-4">
+                    Rejoignez les centaines de professionnels qui ont fait confiance à TCHID Academy pour développer leurs compétences.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">
+                        <i class="fas fa-user-plus me-2"></i>
+                        S'inscrire Maintenant
+                    </a>
+                    <a href="https://t.me/tchidacademy/" target="_blank" class="btn btn-outline-light btn-lg">
+                        <i class="fab fa-telegram me-2"></i>
+                        Rejoindre Telegram
+                    </a>
+                </div>
+                
+                <div class="mt-4">
+                    <small class="opacity-75">
+                        <i class="fas fa-phone me-2"></i>+242 06 528 66 66 / 05 047 18 18
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-envelope me-2"></i>academy@tchidconnect.com
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Animation au scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-on-scroll', 'animated');
+            }
+        });
+    }, observerOptions);
+
+    // Observer tous les éléments avec la classe animate-on-scroll
+    document.querySelectorAll('.formation-card, .modern-card').forEach(el => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
+    });
+
+    // Effet de compteur pour les statistiques
+    function animateCounter(element, target) {
+        let current = 0;
+        const suffix = element.textContent.includes('%') ? '%' : (element.textContent.includes('+') ? '+' : '');
+        const increment = target / 100;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target + suffix;
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current) + suffix;
+            }
+        }, 20);
+    }
+
+    // Animer les compteurs quand ils deviennent visibles
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumber = entry.target.querySelector('.stat-number');
+                const text = statNumber.textContent;
+                let targetValue;
+                
+                if (text.includes('%')) {
+                    targetValue = parseInt(text);
+                } else if (text.includes('+')) {
+                    targetValue = parseInt(text);
+                } else if (text.includes('/')) {
+                    // Pour 24/7, on ne fait pas d'animation
+                    return;
+                } else {
+                    targetValue = parseInt(text);
+                }
+                
+                if (!isNaN(targetValue)) {
+                    animateCounter(statNumber, targetValue);
+                }
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    });
+
+    document.querySelectorAll('.stat-item').forEach(el => {
+        statsObserver.observe(el);
+    });
+</script>
+{% endblock %}

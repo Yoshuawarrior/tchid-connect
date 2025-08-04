@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Test Partenaires - TCHID Connect{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1>Test des Partenaires</h1>
+    
+    <!-- Partners Section -->
+    <section class="partners-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Nos Partenaires Technologiques</h2>
+                <p class="section-subtitle">Test d'affichage des partenaires</p>
+            </div>
+            
+            <div class="row align-items-center justify-content-center g-4">
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="partner-card">
+                        <img src="{{ url_for('static', filename='img/partners/CISCO.png') }}" alt="Cisco" class="img-fluid partner-logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="partner-card">
+                        <img src="{{ url_for('static', filename='img/partners/HIKVISION.png') }}" alt="Hikvision" class="img-fluid partner-logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="partner-card">
+                        <img src="{{ url_for('static', filename='img/partners/MIKROTIK.png') }}" alt="MikroTik" class="img-fluid partner-logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="partner-card">
+                        <img src="{{ url_for('static', filename='img/partners/ZKTeco.png') }}" alt="ZKTeco" class="img-fluid partner-logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="partner-card">
+                        <img src="{{ url_for('static', filename='img/partners/SAP_2011_logo.svg.png') }}" alt="SAP" class="img-fluid partner-logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="partner-card">
+                        <img src="{{ url_for('static', filename='img/partners/DOLIBAR.png') }}" alt="Dolibarr" class="img-fluid partner-logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="partner-card">
+                        <img src="{{ url_for('static', filename='img/partners/WI-TEK.png') }}" alt="Wi-Tek" class="img-fluid partner-logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="partner-card">
+                        <img src="{{ url_for('static', filename='img/partners/OS.png') }}" alt="OS" class="img-fluid partner-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,381 @@
+{% extends 'base.html' %}
+
+{% block title %}TCHID Connect - Experts en Solutions IT{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section py-5 text-white position-relative">
+    <div class="container position-relative" style="z-index: 2;">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-3 fw-bold mb-4">Solutions IT professionnelles pour votre entreprise</h1>
+                <p class="lead mb-4">TCHID Connect IT Consulting est une société spécialisée dans l'administration des systèmes et réseaux, la sécurité électronique, la géolocalisation, l'assistance et l'audit informatique.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="{{ url_for('services') }}" class="btn btn-light btn-lg px-4 py-3">
+                        <i class="fas fa-cogs me-2"></i>Nos Services
+                    </a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg px-4 py-3">
+                        <i class="fas fa-envelope me-2"></i>Contactez-nous
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="hero-video text-center position-relative">
+                    <video 
+                        class="img-fluid rounded shadow-lg" 
+                        style="max-width: 100%; height: auto; border-radius: 16px !important;"
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                        poster="{{ url_for('static', filename='img/Bannière TC.png') }}"
+                    >
+                        <source src="{{ url_for('static', filename='video/video_services.mp4') }}" type="video/mp4">
+                        <img src="{{ url_for('static', filename='img/Bannière TC.png') }}" alt="TCHID Connect Services" class="img-fluid rounded shadow">
+                    </video>
+                    <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 3;">
+                        <button class="btn btn-light btn-lg rounded-circle p-3 video-play-btn" onclick="toggleVideo()" style="width: 70px; height: 70px; display: none;">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Services</h2>
+            <p class="section-subtitle">Des solutions complètes pour répondre à vos besoins informatiques</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Service 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card service-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-network-wired fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="card-title h5">Installation et Maintenance Infrastructures IT</h3>
+                        <p class="card-text">Câblage réseau, création de sites web, intégration et déploiement, administration réseau et support technique.</p>
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="{{ url_for('infrastructure_services') }}" class="btn btn-primary flex-fill">Devis</a>
+                            <a href="tel:+242065286666" class="btn btn-outline-primary">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card service-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-video fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="card-title h5">Vidéo-surveillance</h3>
+                        <p class="card-text">Anti-intrusion, reconnaissance faciale, contrôle d'accès et systèmes d'alarmes.</p>
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="{{ url_for('video_surveillance') }}" class="btn btn-primary flex-fill">Demander un devis</a>
+                            <a href="tel:+242065286666" class="btn btn-outline-primary">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card service-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-map-marker-alt fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="card-title h5">Géolocalisation</h3>
+                        <p class="card-text">Tracking GPS, détection de position en temps réel, geofencing et optimisation d'itinéraires.</p>
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="{{ url_for('geolocation') }}" class="btn btn-primary flex-fill">Demander un devis</a>
+                            <a href="tel:+242065286666" class="btn btn-outline-primary">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card service-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-headset fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="card-title h5">Support Technique</h3>
+                        <p class="card-text">Assistance informatique, audit et conseil, formation utilisateurs et maintenance.</p>
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="{{ url_for('it_support') }}" class="btn btn-primary flex-fill">Demander un devis</a>
+                            <a href="tel:+242065286666" class="btn btn-outline-primary">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='img/about-image.png') }}" alt="À propos de TCHID Connect" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title">À Propos de Nous</h2>
+                <p class="mb-4">TCHID Connect IT Consulting est une société spécialisée dans l'administration des systèmes et réseaux, la sécurité électronique, la géolocalisation, l'assistance et l'audit informatique.</p>
+                <p class="mb-4">Nous accompagnons les entreprises et les organisations dans l'optimisation de leurs infrastructures IT et la sécurisation de leurs actifs.</p>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="badge bg-primary p-2">Expertise technique</span>
+                    <span class="badge bg-primary p-2">Service de qualité</span>
+                    <span class="badge bg-primary p-2">Coût réduit</span>
+                    <span class="badge bg-primary p-2">Support 24/7</span>
+                    <span class="badge bg-primary p-2">Solutions personnalisées</span>
+                </div>
+                <a href="{{ url_for('about') }}" class="btn btn-primary">En savoir plus sur nous</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Ce que nos clients disent</h2>
+            <p class="section-subtitle">Découvrez pourquoi nos clients nous font confiance</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card testimonial-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="testimonial-rating text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="card-text mb-3">"TCHID Connect a transformé notre infrastructure réseau. Leur expertise technique et leur professionnalisme sont remarquables. Je recommande vivement leurs services."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="testimonial-avatar me-3">
+                                <div class="avatar-placeholder bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <span>JD</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Jean Dupont</h5>
+                                <p class="text-muted mb-0">Directeur IT, Entreprise XYZ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card testimonial-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="testimonial-rating text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="card-text mb-3">"Le système de vidéo-surveillance installé par TCHID Connect a considérablement amélioré la sécurité de nos locaux. Un service de qualité à un coût très compétitif."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="testimonial-avatar me-3">
+                                <div class="avatar-placeholder bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <span>ML</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Marie Lefebvre</h5>
+                                <p class="text-muted mb-0">Responsable Sécurité, Société ABC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card testimonial-card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="testimonial-rating text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <p class="card-text mb-3">"Grâce au système de géolocalisation mis en place par TCHID Connect, nous avons optimisé la gestion de notre flotte de véhicules. Un gain de temps et d'argent considérable."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="testimonial-avatar me-3">
+                                <div class="avatar-placeholder bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <span>PK</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Pierre Kouassi</h5>
+                                <p class="text-muted mb-0">Directeur Logistique, Transport Express</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partners Section -->
+<section class="partners-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Partenaires Technologiques</h2>
+            <p class="section-subtitle">Nous collaborons avec les leaders mondiaux de la technologie</p>
+        </div>
+        
+        <div class="row align-items-center justify-content-center g-4">
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-card">
+                    <img src="{{ url_for('static', filename='img/partners/CISCO.png') }}" alt="Cisco" class="img-fluid partner-logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-card">
+                    <img src="{{ url_for('static', filename='img/partners/HIKVISION.png') }}" alt="Hikvision" class="img-fluid partner-logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-card">
+                    <img src="{{ url_for('static', filename='img/partners/MIKROTIK.png') }}" alt="MikroTik" class="img-fluid partner-logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-card">
+                    <img src="{{ url_for('static', filename='img/partners/ZKTeco.png') }}" alt="ZKTeco" class="img-fluid partner-logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-card">
+                    <img src="{{ url_for('static', filename='img/partners/SAP_2011_logo.svg.png') }}" alt="SAP" class="img-fluid partner-logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-card">
+                    <img src="{{ url_for('static', filename='img/partners/DOLIBAR.png') }}" alt="Dolibarr" class="img-fluid partner-logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-card">
+                    <img src="{{ url_for('static', filename='img/partners/WI-TEK.png') }}" alt="Wi-Tek" class="img-fluid partner-logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center">
+                <div class="partner-card">
+                    <img src="{{ url_for('static', filename='img/partners/OS.png') }}" alt="OS" class="img-fluid partner-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section py-5 bg-primary text-white text-center">
+    <div class="container">
+        <h2 class="mb-4">Prêt à optimiser votre infrastructure IT?</h2>
+        <p class="lead mb-4">Contactez-nous dès aujourd'hui pour discuter de vos besoins et obtenir un devis personnalisé.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Contactez-nous</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Contrôle de la vidéo
+    function toggleVideo() {
+        const video = document.querySelector('video');
+        const playBtn = document.querySelector('.video-play-btn');
+        
+        if (video.paused) {
+            video.play();
+            playBtn.style.display = 'none';
+        } else {
+            video.pause();
+            playBtn.style.display = 'block';
+        }
+    }
+    
+    // Gestion des événements vidéo
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.querySelector('video');
+        const playBtn = document.querySelector('.video-play-btn');
+        
+        if (video && playBtn) {
+            video.addEventListener('pause', function() {
+                playBtn.style.display = 'block';
+            });
+            
+            video.addEventListener('play', function() {
+                playBtn.style.display = 'none';
+            });
+            
+            // Afficher le bouton si la vidéo ne peut pas être lue automatiquement
+            video.addEventListener('loadstart', function() {
+                setTimeout(() => {
+                    if (video.paused) {
+                        playBtn.style.display = 'block';
+                    }
+                }, 1000);
+            });
+        }
+    });
+    
+    // Animation au scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-on-scroll', 'animated');
+            }
+        });
+    }, observerOptions);
+
+    // Observer tous les éléments avec animation
+    document.querySelectorAll('.service-card, .testimonial-card').forEach(el => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
+    });
+</script>
+{% endblock %}
